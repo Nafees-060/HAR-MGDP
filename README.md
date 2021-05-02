@@ -32,8 +32,23 @@ The dataset (PAMP2) is included here in the repository with folder name **input*
  4. `login:  (Enter your Login)`
  5. `Password (Enter your password)`
  6. `export SLURM_CONF=/opt1/slurm/gpu-slurm.conf`
- 7. `srun --qos=gpu --gres=gpu:1 -n 4 -c 4 -C rtx2080,ubuntu18 --pty bash`  `#(gpu: 1, 2, 3, 4, 5)`
+ 7. `srun --qos=gpu --gres=gpu:1 -n 4 -c 4 -C rtx2080,ubuntu18 --pty bash`  #(gpu: 1, 2, 3, 4, 5)
  8. `Go into your directory` `cd /research/Abc/xyz`
  9. `git clone https://github.com/Nafees-060/HAR-MGDP.git`
  10. `cd HAR-MGDP`
- 11. `/usr/local/bin/horovodrun -np 2 -H localhost:2 /usr/bin/python3 HAR-CNN-Horovod.py 256`   `# 256 is the Batch size. By default it is set 500'
+ 11. `/usr/local/bin/horovodrun -np 2 -H localhost:2 /usr/bin/python3 HAR-CNN-Horovod.py 256`   # 256 is the Batch size. By default it is set 500
+
+## Experimental Workflow 
+1.	Please repeat the step of Usage -> CUHK User -> 7 (with the changes of --gres=gpu:1 or 2 or 3 or 4 or 5) to see the results across all number of GPUs. Such as 
+    * srun --qos=gpu --gres=gpu:1, 2,3, 4, 5 -n 4 -c 4 -C rtx2080,ubuntu18 --pty
+2.	In case of all GPUs repeat the Usage -> CUHK User -> 11 (with the changes of batch size 256, 512, 1024, 2048 and 4096). Such as 
+    *	/usr/local/bin/horovodrun -np 2 -H localhost:2 /usr/bin/python3 HAR-CNN-Horovod.py 256, 512, 1024, 2048 and 4096
+
+3.	In summary, Experiments were carried out with different batch sizes (powers of 2) on all considered GPUs to see the effect of batch size.
+
+
+
+
+
+
+
