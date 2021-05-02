@@ -50,6 +50,8 @@ The dataset (PAMP2) is included here in the repository with folder name **input*
 In case of any difficulties in using the described system, please raise an issue here in repository: https://github.com/Nafees-060/HAR-MGDP/issues
 
 
-
+## Acknoledgement 
+- Thanks to the deveoper of Uber Technologies Inc, Linux Foundation for the avialbility of Horovod
+- Thanks to the tgaddair for open-sourcing [Horovod Examples implementation in Tensorflow](https://github.com/horovod/horovod/tree/master/examples/tensorflow2)
 
 
