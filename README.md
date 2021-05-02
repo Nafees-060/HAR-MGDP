@@ -32,10 +32,7 @@ The dataset (PAMP2) is included here in the repository with folder name **input*
  4. `login:  (Enter your Login)`
  5. `Password (Enter your password)`
  6. `export SLURM_CONF=/opt1/slurm/gpu-slurm.conf`
-
-## Note 
-In case of any difficulties in using the described system, please raise an issue here in repository: https://github.com/Nafees-060/HAR-MGDP/issues
-
+ 7.	`srun --qos=gpu --gres=gpu:1 -n 4 -c 4 -C rtx2080,ubuntu18 --pty bash`  #(gpu: 1, 2, 3, 4, 5)
  8. `srun --qos=gpu --gres=gpu:1 -n 4 -c 4 -C rtx2080,ubuntu18 --pty bash`  #(gpu: 1, 2, 3, 4, 5)
  9. `Go into your directory` `cd /research/Abc/xyz`
  10. `git clone https://github.com/Nafees-060/HAR-MGDP.git`
@@ -50,7 +47,8 @@ In case of any difficulties in using the described system, please raise an issue
 
 3.	In summary, Experiments were carried out with different batch sizes (powers of 2) on all considered GPUs to see the effect of batch size.
 
-
+## Note 
+In case of any difficulties in using the described system, please raise an issue here in repository: https://github.com/Nafees-060/HAR-MGDP/issues
 
 
 
