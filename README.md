@@ -4,6 +4,7 @@
 - Python version: 3.6.9
 - TensorFlow : 2.2.0
 - Keras : 2.3.1
+- Horovod
 ### Hardware 
 - Multi-GPU cluset setup 
 # Installation
