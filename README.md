@@ -32,11 +32,15 @@ The dataset (PAMP2) is included here in the repository with folder name **input*
  4. `login:  (Enter your Login)`
  5. `Password (Enter your password)`
  6. `export SLURM_CONF=/opt1/slurm/gpu-slurm.conf`
- 7. `srun --qos=gpu --gres=gpu:1 -n 4 -c 4 -C rtx2080,ubuntu18 --pty bash`  #(gpu: 1, 2, 3, 4, 5)
- 8. `Go into your directory` `cd /research/Abc/xyz`
- 9. `git clone https://github.com/Nafees-060/HAR-MGDP.git`
- 10. `cd HAR-MGDP`
- 11. `/usr/local/bin/horovodrun -np 2 -H localhost:2 /usr/bin/python3 HAR-CNN-Horovod.py 256`   # 256 is the Batch size. By default it is set 500
+
+## Note 
+In case of any difficulties in using the described system, please raise an issue here in repository: https://github.com/Nafees-060/HAR-MGDP/issues
+
+ 8. `srun --qos=gpu --gres=gpu:1 -n 4 -c 4 -C rtx2080,ubuntu18 --pty bash`  #(gpu: 1, 2, 3, 4, 5)
+ 9. `Go into your directory` `cd /research/Abc/xyz`
+ 10. `git clone https://github.com/Nafees-060/HAR-MGDP.git`
+ 11. `cd HAR-MGDP`
+ 12. `/usr/local/bin/horovodrun -np 2 -H localhost:2 /usr/bin/python3 HAR-CNN-Horovod.py 256`   # 256 is the Batch size. By default it is set 500
 
 ## Experimental Workflow 
 1.	Please repeat the step of Usage -> CUHK User -> 7 (with the changes of --gres=gpu:1 or 2 or 3 or 4 or 5) to see the results across all number of GPUs. Such as 
