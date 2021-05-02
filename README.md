@@ -21,4 +21,6 @@
 The dataset (PAMP2) is included here in the repository with folder name **input**
 ## Usage 
 ### General User
-  1. git clone https://bitbucket.org/udayb/polymage.git -b ppopp-2018-ae
+  1. `cd Go into your directory`
+  2.  `git clone https://github.com/Nafees-060/HAR-MGDP.git`
+  2. `cd HAR-MGDP`
